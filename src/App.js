@@ -10,25 +10,8 @@ function createRandomPost() {
 }
 
 function App() {
-  // Whenever `isFakeDark` changes, we toggle the `fake-dark-mode` class on the HTML element (see in "Elements" dev tool).
-  const [isFakeDark, setIsFakeDark] = useState(false);
-
-  useEffect(
-    function () {
-      document.documentElement.classList.toggle("fake-dark-mode");
-    },
-    [isFakeDark]
-  );
-
   return (
     <section>
-      <button
-        onClick={() => setIsFakeDark((isFakeDark) => !isFakeDark)}
-        className="btn-fake-dark-mode"
-      >
-        {isFakeDark ? "☀️" : "🌙"}
-      </button>
-
       <PostProvider>
         <Header />
         <Main />
@@ -41,16 +24,30 @@ function App() {
 
 function Header() {
   const { onClearPosts } = usePosts();
+  const [isFakeDark, setIsFakeDark] = useState(false);
+
+  useEffect(
+    function () {
+      document.documentElement.classList.toggle("fake-dark-mode");
+    },
+    [isFakeDark]
+  );
 
   return (
     <header>
       <h1>
-        <span>⚛️</span>The Atomic Blog
+        <span>🚀</span>Blog Space
       </h1>
       <div>
         <Results />
         <SearchPosts />
         <button onClick={onClearPosts}>Clear posts</button>
+        <button
+          onClick={() => setIsFakeDark((isFakeDark) => !isFakeDark)}
+          className="btn-fake-dark-mode"
+        >
+          {isFakeDark ? "☀️" : "🌙"}
+        </button>
       </div>
     </header>
   );
@@ -72,7 +69,7 @@ function SearchPosts() {
 function Results() {
   // 3) consuming the context value
   const { posts } = usePosts();
-  return <p>🚀 {posts.length} atomic posts found</p>;
+  return <p>🚀 {posts.length} posts found</p>;
 }
 
 function Main() {
@@ -137,8 +134,6 @@ function List() {
 }
 
 function Archive() {
-  // Here we don't need the setter function. We're only using state to store these posts because the callback function passed into useState (which generates the posts) is only called once, on the initial render. So we use this trick as an optimization technique, because if we just used a regular variable, these posts would be re-created on every render. We could also move the posts outside the components, but I wanted to show you this trick 😉
-  // 3) consuming the context value
   const { onAddPost } = usePosts();
   const [posts] = useState(() =>
     // 💥 WARNING: This might make your computer slow! Try a smaller `length` first
@@ -171,7 +166,7 @@ function Archive() {
 }
 
 function Footer() {
-  return <footer>&copy; by The Atomic Blog ✌️</footer>;
+  return <footer>&copy; by BlogSpace 🌟</footer>;
 }
 
 export default App;

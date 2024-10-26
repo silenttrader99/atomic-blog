@@ -5,29 +5,16 @@
 }
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-
-  color: #222;
-  line-height: 1.25;
-  background: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  color: #333;
+  background: #fdfdfd;
+  line-height: 1.6;
   padding: 32px;
 }
 
 .fake-dark-mode {
   filter: invert(100%);
   transition: all 0.5s;
-}
-
-.btn-fake-dark-mode {
-  position: fixed;
-  top: 0;
-  right: 0;
-  padding: 16px;
-  line-height: 1;
-  font-size: 26px;
-  background-color: #ffe8cc;
-  border: none;
 }
 
 section {
@@ -38,13 +25,13 @@ section {
 header {
   margin-bottom: 32px;
   font-weight: bold;
-
-  justify-content: space-between;
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 h1 {
-  font-size: 26px;
+  font-size: 2rem;
   display: flex;
   gap: 8px;
   align-items: center;
@@ -55,34 +42,55 @@ h1 span {
   line-height: 1;
 }
 
+h2,
+h3 {
+  color: #444;
+  font-weight: bold;
+}
+
 h2 {
   text-transform: uppercase;
   margin-bottom: 24px;
-  color: #333;
+  font-size: 1.5rem;
 }
 
 h3 {
   text-transform: capitalize;
   margin-bottom: 16px;
-  color: #333;
+  font-size: 1.25rem;
 }
 
 header div {
   display: flex;
   gap: 32px;
   align-items: center;
+  justify-content: space-between;
 }
 
 header button {
   font-size: 14px;
+  border-radius: 8px;
+}
+
+header .btn-fake-dark-mode {
+  top: 0;
+  right: 0;
+  padding: 10px;
+  line-height: 1;
+  font-size: 24px;
+  background-color: #f0e7d5;
+  border: none;
+  border-radius: 8px;
 }
 
 form {
   padding: 24px;
-  background-color: #fff4e6;
+  background-color: #f0e7d5;
   display: flex;
   gap: 24px;
   margin-bottom: 40px;
+  border-radius: 8px;
+  flex-wrap: wrap;
 }
 
 main {
@@ -92,6 +100,7 @@ main {
 aside {
   margin-bottom: 40px;
   opacity: 75%;
+  border-radius: 8px;
 }
 
 input,
@@ -99,9 +108,10 @@ textarea,
 button {
   font-size: 16px;
   padding: 8px 12px;
-  border: 1px solid #ffe8cc;
-  font-family: inherit;
+  border: 1px solid #f0e7d5;
+  font-family: Georgia, serif;
   color: inherit;
+  border-radius: 4px;
 }
 
 input {
@@ -113,43 +123,43 @@ input {
 }
 
 *:focus {
-  outline: 2px solid #ffa94d;
-  border-radius: 2px;
+  outline: 2px solid #e6cc98;
+  border-radius: 4px;
 }
 
 textarea {
   flex: 1;
   height: 50px;
+  border-radius: 4px;
 }
 
 button {
-  border: 1px solid #ffa94d;
-  background-color: #ffa94d;
+  border: 1px solid #e6cc98;
+  background-color: #e6cc98;
   font-weight: 700;
   padding: 9px 24px;
   cursor: pointer;
-}
-
-h3 {
-  text-transform: capitalize;
-  margin-bottom: 16px;
-  color: #333;
+  border-radius: 4px;
 }
 
 main ul {
   list-style: none;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 32px;
 }
 
 main li {
-  border: 1px solid #ffe8cc;
+  border: 1px solid #f0e7d5;
   padding: 16px 20px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  font-family: Georgia, serif;
 }
 
 main li:hover {
-  background-color: #fff4e6;
+  background-color: #f8f3e6;
 }
 
 aside ul {
@@ -161,11 +171,12 @@ aside ul {
 }
 
 aside li {
-  border: 1px solid #ffe8cc;
+  border: 1px solid #f0e7d5;
   padding: 4px 8px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-radius: 4px;
 }
 
 h2 + button {
@@ -175,4 +186,79 @@ h2 + button {
 aside li button {
   padding: 4px 8px;
   font-size: 14px;
+}
+
+@media (max-width: 938px) {
+  header h1 {
+    font-size: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 16px;
+  }
+
+  header {
+    display: flex;
+    flex-direction: row;
+  }
+
+  header p {
+    display: none;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  main ul {
+    grid-template-columns: 1fr;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  header h1 {
+    font-size: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  h3 {
+    font-size: 0.875rem;
+  }
+
+  header button {
+    display: none;
+  }
+
+  header p {
+    display: none;
+  }
 }
