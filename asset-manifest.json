@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/silenttrader99/space-block.git/static/css/main.439745cc.css",
+    "main.js": "/silenttrader99/space-block.git/static/js/main.56e6c319.js",
+    "index.html": "/silenttrader99/space-block.git/index.html",
+    "main.439745cc.css.map": "/silenttrader99/space-block.git/static/css/main.439745cc.css.map",
+    "main.56e6c319.js.map": "/silenttrader99/space-block.git/static/js/main.56e6c319.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.439745cc.css",
+    "static/js/main.56e6c319.js"
+  ]
+}
