@@ -1,7 +1,7 @@
 {
-  "name": "atomic-blog",
+  "name": "space-blog",
   "version": "0.1.0",
-  "homepage": "https://github.com/silenttrader99/space-block.git",
+  "homepage": "https://silenttrader99.github.io/space-blog",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
