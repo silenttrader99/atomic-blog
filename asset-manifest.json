@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/silenttrader99/space-blog.git/static/css/main.439745cc.css",
-    "main.js": "/silenttrader99/space-blog.git/static/js/main.56e6c319.js",
-    "index.html": "/silenttrader99/space-blog.git/index.html",
-    "main.439745cc.css.map": "/silenttrader99/space-blog.git/static/css/main.439745cc.css.map",
-    "main.56e6c319.js.map": "/silenttrader99/space-blog.git/static/js/main.56e6c319.js.map"
+    "main.css": "/space-blog/static/css/main.439745cc.css",
+    "main.js": "/space-blog/static/js/main.56e6c319.js",
+    "index.html": "/space-blog/index.html",
+    "main.439745cc.css.map": "/space-blog/static/css/main.439745cc.css.map",
+    "main.56e6c319.js.map": "/space-blog/static/js/main.56e6c319.js.map"
   },
   "entrypoints": [
     "static/css/main.439745cc.css",
