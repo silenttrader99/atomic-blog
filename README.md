@@ -9,11 +9,6 @@ Because with a dark mode this cool, we’re basically already in space. And who 
 - **Responsive Design**: View posts on any device without squinting or endless scrolling.
 - **Simple Blog Interface**: A clean layout that lets you focus on the cosmic content.
 
-## Technologies Used
-- **React**: Built using Create React App for a quick and flexible setup.
-- **CSS**: For that smooth dark/light mode switch.
-- **JavaScript**: Because what’s a blog app without some interactivity?
-
 ## Getting Started
 1. Clone the repository:
    ```bash
